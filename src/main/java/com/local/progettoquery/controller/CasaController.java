@@ -20,6 +20,7 @@ public class CasaController {
     @Autowired
     private CasaService casaService;
 
+    // richiamo il metodo creato in CasaService
     @GetMapping("/trova_casa")
     public List<CasaResponseDTO> trovaCasaByPersona (@RequestParam Long personaId) {
         return casaService.trovaCasaByPersona(personaId);

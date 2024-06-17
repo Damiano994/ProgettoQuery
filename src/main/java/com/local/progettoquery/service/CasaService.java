@@ -15,6 +15,7 @@ public class CasaService {
     @Autowired
     private CasaRepository casaRepository;
 
+    // richiamo il metodo creato in casaRepository
     public List<CasaResponseDTO> trovaCasaByPersona(Long personaId) {
         List<CasaResponseDTO> listaCase = casaRepository.findByPersonaId(personaId);
         return listaCase;

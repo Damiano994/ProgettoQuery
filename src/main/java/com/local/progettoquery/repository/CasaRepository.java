@@ -19,6 +19,7 @@ public interface CasaRepository extends JpaRepository<Casa, Long> {
     //WHERE c.persona.idPersona = :personaId: Applica un filtro per recuperare solo le istanze di Casa in cui l'ID della persona corrisponde
     // al parametro personaId fornito alla query.
     //List<CasaResponseDTO>: Indica che il metodo restituirà una lista di oggetti CasaResponseDTO, non una lista di entità Casa.
+
     @Query("Select new com.local.progettoquery.dto.casa.CasaResponseDTO(c.idCasa,c.indirizzoCasa,c.grandezzaCasa)" +
             "FROM Casa c " +
             "WHERE c.persona.idPersona = :personaId")

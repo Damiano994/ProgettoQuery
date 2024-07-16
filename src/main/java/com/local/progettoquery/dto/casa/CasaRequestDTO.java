@@ -14,4 +14,8 @@ public class CasaRequestDTO {
 
     private String indirizzo;
     private double grandezza;
+
+
+
+
 }
